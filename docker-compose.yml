@@ -1,0 +1,11 @@
+services:
+  mongo:
+    image: mongo:7
+    container_name: resume-scanner-mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - resume_mongo_data:/data/db
+volumes:
+  resume_mongo_data:
